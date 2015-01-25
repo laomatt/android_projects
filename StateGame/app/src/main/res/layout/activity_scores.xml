@@ -1,0 +1,218 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:isScrollContainer="true"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg2"
+    tools:context="com.example.mattlao.stategame.scores">
+
+    <!--the results label -->
+    <TextView
+        android:id="@+id/scorelabel"
+        android:gravity="center"
+        android:text="RESULTS"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <!-- congratulates the player by name if they get a perfect score
+     or offers some feedback on the states they got wrong-->
+        <TextView
+            android:id="@+id/scoresheader"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" the score "
+            android:layout_below="@+id/scorelabel"
+            />
+
+    <TextView
+        android:id="@+id/topsco"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="Top six scores so far..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scoresheader"
+
+        />
+
+
+    <!-- here we display the sql table that holds the scores  -->
+    <RelativeLayout
+        android:id="@+id/scorestable"
+        android:gravity="top"
+        android:layout_centerVertical="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:verticalScrollbarPosition="right"
+        android:layout_below="@id/topsco"
+        >
+
+
+    <!-- HERE IS THE DATA COLS-->
+        <!-- the header line -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/resultsht"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/namecol"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="NAME"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:textSize="@dimen/textsizeresult"
+                />
+            <TextView
+                android:id="@+id/scorecol"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="SCORE"
+                android:gravity="center"
+                android:textSize="@dimen/textsizeresult"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                />
+            <TextView
+                android:id="@+id/timecol"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="TIME"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:textSize="@dimen/textsizeresult"
+                />
+            <TextView
+                android:id="@+id/pointscol"
+                android:text="POINTS"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/textsizeresult"
+                />
+        </LinearLayout>
+<LinearLayout
+    android:id="@+id/tablewrapper"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:layout_below="@id/header"
+    android:gravity="center"
+    >
+
+
+
+       <ListView
+           android:id="@+id/scoretables"
+           android:layout_width="450dp"
+           android:layout_height="300dp"
+
+          >
+           </ListView>
+</LinearLayout>
+
+        <TextView
+            android:id="@+id/buffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Current high scorer"
+            android:textSize="30dp"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_below="@id/tablewrapper"
+            />
+
+
+    <!-- this is a layout for all my buttons at the bottom-->
+    <LinearLayout
+        android:id="@+id/buttonpanel"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/buffer"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <!-- this layout handles the space shared by my radio buttons and
+        my playagain button-->
+        <LinearLayout
+            android:id="@+id/playagain"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            >
+            <RadioGroup
+                android:id="@+id/firstorsecond"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                >
+
+                <RadioButton
+                    android:id="@+id/testcapitols"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test capitols"
+                    android:onClick="onRadio"
+                    />
+                <RadioButton
+                    android:id="@+id/teststates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test states"
+                    android:onClick="onRadio"
+
+                    />
+
+
+
+                </RadioGroup>
+    <Button
+        android:id="@+id/playagainbutton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Play again"
+        android:onClick="press"
+        android:gravity="center"
+
+        />
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/newplayer"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="new player"
+        android:onClick="press"
+
+        />
+
+    <Button
+        android:id="@+id/deleterecord"
+        android:text="Clear table"
+        android:onClick="press"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        />
+
+        <!--the current high scorer, for bragging rights -->
+</LinearLayout>
+
+
+</RelativeLayout>
+
+</RelativeLayout>

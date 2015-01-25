@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--These are all the various string resources for my app-->
+    <string name="app_name">TempConverter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Temperature converter</string>
+
+    <string name="ftoc">Farenheit to Celcius</string>
+    <string name="ctof">Celcius to Fahrenheit</string>
+    <string name="btext">Convert it!</string>
+    <string name="exampletext">Temperature to convert</string>
+
+
+    <color name="red">#ffff0c0b</color>
+
+</resources>

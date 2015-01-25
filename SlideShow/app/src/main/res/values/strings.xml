@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Author: Matthew Lao
+class: 211D
+Date: 9-24-14
+
+Description:  This program Cycles through my portfolio images in the drawable
+folder in a slideshow and
+displays them on screen by pressing a next button and a previous button.
+-->
+<resources>
+
+    <string name="app_name">SlideShow</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Matthew Lao Portfolio</string>
+    <string name="pbutton">Previous image</string>
+    <string name="nbutton">Next image</string>
+
+
+
+
+</resources>

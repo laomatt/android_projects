@@ -1,0 +1,66 @@
+<!--
+* Author: Matthew Lao
+* class: 211D  HW#6
+* Date: 11-13-14
+*
+* Description:  This is a game that tests the users knowledge of US states and
+* thier capitols, then it lists the top scorers for the game via a SQL table.
+*
+
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Stategame">
+    <FrameLayout
+        android:id="@+id/doormat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- splash image, later we set it to my animation of a running
+         cartoon bear-->
+
+    <ImageView
+        android:id="@+id/splashimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- asking player to input his/her name-->
+    <TextView
+        android:text="Enter your name, !"
+        android:id="@+id/textfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        />
+
+    <EditText
+        android:id="@+id/editfield"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        />
+
+        <!-- submit name buttom-->
+    <Button
+        android:id="@+id/button1"
+        android:text="Submit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="sendMessage"
+        android:layout_gravity="bottom"
+        />
+
+    </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

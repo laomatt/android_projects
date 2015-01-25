@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mattlao.drawme" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".startscreen"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ArtistUpload"
+            android:label="@string/title_activity_artist_upload" >
+        </activity>
+        <activity
+            android:name=".artist_draw"
+            android:label="@string/title_activity_artist_draw" >
+        </activity>
+        <activity
+            android:name=".model_upload"
+            android:label="@string/title_activity_model_upload" >
+        </activity>
+        <activity
+            android:name=".artist_download"
+            android:label="@string/title_activity_artist_download" >
+        </activity>
+        <activity
+            android:name=".model_pose"
+            android:label="@string/title_activity_model_pose" >
+        </activity>
+    </application>
+
+</manifest>

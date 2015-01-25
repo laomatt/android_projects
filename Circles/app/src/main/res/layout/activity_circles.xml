@@ -1,0 +1,69 @@
+<!--
+/*
+* Author: Matthew Lao
+* class: 211D
+* Date: 9-31-14
+* Title: HW#5: Circles
+*
+* Description:  This program draws circles onto a canvas in different positions
+* and colors then clears them all.
+* */
+
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/motherframe"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".circles">
+<!--my main output window, and the image in it-->
+    <FrameLayout
+        android:id="@+id/mainframe"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <ImageView
+            android:id="@+id/mainwindow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+        </FrameLayout>
+<!--my buttons-->
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <Button
+            android:id="@+id/hitbutton"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:text="@string/buttonmain"
+            android:layout_marginLeft="50dp"
+            android:onClick="doit"
+            />
+
+        <Button
+            android:id="@+id/clearbutton"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:textAlignment="center"
+            android:text="@string/clear"
+            android:layout_marginLeft="50dp"
+            android:onClick="doit"
+            />
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

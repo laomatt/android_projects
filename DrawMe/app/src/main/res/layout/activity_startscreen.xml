@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    tools:context=".startscreen">
+<LinearLayout
+    android:id="@+id/usersett"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="3dp"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="press"
+        android:textSize="@dimen/regtext"
+        android:text="SIGN IN"
+
+        />
+
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="press"
+        android:textSize="@dimen/regtext"
+        android:text="SETTINGS "
+
+        />
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="press"
+        android:textSize="@dimen/regtext"
+        android:text="SIGN UP "
+
+        />
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="press"
+        android:textSize="@dimen/regtext"
+        android:text="SIGN OUT"
+
+        />
+    <Button
+        android:id="@+id/populatepics"
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:onClick="press"
+        android:textSize="@dimen/regtext"
+        android:text="populate"
+
+        />
+
+
+
+
+
+
+
+</LinearLayout>
+
+    
+    <LinearLayout
+        android:layout_below="@id/usersett"
+        android:id="@+id/main"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/colwd"
+            android:padding="@dimen/padd"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            
+            >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/subtitle"
+                android:text="Artist"
+
+                />
+
+
+            <TextView
+                android:layout_width="450px"
+                android:layout_height="120px"
+                android:text="name"
+                android:gravity="center"
+                android:textSize="@dimen/regtext"
+                />
+            <EditText
+                android:layout_width="450px"
+                android:layout_height="120px"
+
+                />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonht"
+                android:text="UPLOAD"
+                android:onClick="press"
+                android:textSize="@dimen/regtext"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonht"
+                android:text="DOWLOAD"
+                android:onClick="press"
+                android:textSize="@dimen/regtext"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="DRAW!"
+                android:onClick="press"
+                android:textSize="@dimen/regtext"
+                />
+            </LinearLayout>
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="700px"
+            android:padding="@dimen/padd"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="@dimen/colwd"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/subtitle"
+                    android:text="Model"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="450px"
+                    android:layout_height="120px"
+                    android:text="name"
+                    android:gravity="center"
+                    android:textSize="@dimen/regtext"
+                    />
+                <EditText
+                    android:layout_width="450px"
+                    android:layout_height="120px"
+
+                    />
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonht"
+                    android:text="UPLOAD"
+                    android:onClick="press"
+                    android:textSize="@dimen/regtext"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:text="POSE!"
+                    android:onClick="press"
+                    android:textSize="@dimen/regtext"
+                    />
+            </LinearLayout>
+
+
+
+            </LinearLayout>
+<!-- the pictures -->
+        <GridView
+            android:id="@+id/pictures"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="@dimen/thumnail"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:gravity="top"
+
+            >
+
+
+
+
+        </GridView>
+        
+        
+        
+        
+        </LinearLayout>
+
+</RelativeLayout>

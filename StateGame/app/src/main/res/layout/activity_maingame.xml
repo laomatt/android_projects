@@ -1,0 +1,262 @@
+<!--
+* Author: Matthew Lao
+* class: 211D  HW#6
+* Date: 11-13-14
+*
+* Description:  This is a game that tests the users knowledge of US states and
+* thier capitols, then it lists the top scorers for the game via a SQL table.
+*
+
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mattlao.stategame.maingame">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <!-- this displays the name of the current player-->
+    <TextView
+        android:id="@+id/test"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp
+        " />
+
+    <RelativeLayout
+        android:id="@+id/scoreslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/test"
+
+        >
+
+        <!-- this displays the instructions for the game being played-->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/instructions"
+    android:text=""
+    android:gravity="center"
+    android:textSize="30dp"
+    />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/timer"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:layout_below="@id/instructions"
+            />
+
+
+
+
+        <!-- the questions and answers-->
+
+    <TextView
+        android:id="@+id/state1"
+        android:layout_width="@dimen/form_width"
+        android:layout_height="@dimen/input_height"
+        android:text="State 1"
+        android:textSize="@dimen/statenamesize"
+        android:layout_marginTop="@dimen/maingamespaceing"
+        android:gravity="center"
+        android:layout_below="@id/timer"
+
+
+        />
+
+        <EditText
+            android:id="@+id/st1ans"
+            android:layout_width="@dimen/form_width"
+            android:layout_height="@dimen/input_height"
+            android:textSize="@dimen/statenamesize"
+            android:layout_marginTop="@dimen/maingamespaceing"
+            android:layout_toRightOf="@id/state1"
+            android:autoText="false"
+            android:gravity="center"
+            android:layout_below="@id/timer"
+            android:background="@android:color/white"
+
+            />
+
+    <TextView
+        android:id="@+id/state2"
+        android:layout_width="@dimen/form_width"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/statenamesize"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/maingamespaceing"
+        android:layout_below="@id/state1"
+        android:text="State 2"
+        />
+
+        <EditText
+            android:id="@+id/st2ans"
+            android:layout_width="@dimen/form_width"
+            android:layout_height="@dimen/input_height"
+            android:textSize="@dimen/statenamesize"
+            android:layout_marginTop="@dimen/maingamespaceing"
+            android:autoText="false"
+            android:layout_toRightOf="@id/state2"
+            android:gravity="center"
+            android:layout_below="@id/st1ans"
+            android:background="@android:color/white"
+            />
+
+        <TextView
+        android:id="@+id/state3"
+        android:layout_width="@dimen/form_width"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/statenamesize"
+            android:gravity="center"
+        android:layout_marginTop="@dimen/maingamespaceing"
+        android:layout_below="@id/state2"
+        android:text="State 3"
+        />
+
+        <EditText
+            android:id="@+id/st3ans"
+            android:layout_width="@dimen/form_width"
+            android:layout_height="@dimen/input_height"
+            android:textSize="@dimen/statenamesize"
+            android:layout_marginTop="@dimen/maingamespaceing"
+            android:layout_toRightOf="@id/state3"
+            android:autoText="false"
+            android:gravity="center"
+            android:layout_below="@id/st2ans"
+            android:background="@android:color/white"
+            />
+    <TextView
+        android:id="@+id/state4"
+        android:layout_width="@dimen/form_width"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/statenamesize"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/maingamespaceing"
+        android:layout_below="@id/state3"
+        android:text="State 4"
+
+        />
+
+        <EditText
+            android:id="@+id/st4ans"
+            android:layout_width="@dimen/form_width"
+            android:layout_height="@dimen/input_height"
+            android:textSize="@dimen/statenamesize"
+            android:layout_marginTop="@dimen/maingamespaceing"
+            android:layout_toRightOf="@id/state4"
+            android:autoText="false"
+            android:gravity="center"
+            android:layout_below="@id/st3ans"
+            android:background="@android:color/white"
+            />
+    <TextView
+        android:id="@+id/state5"
+        android:layout_width="@dimen/form_width"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/statenamesize"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/maingamespaceing"
+        android:layout_below="@id/state4"
+        android:text="State 5"
+        />
+
+        <EditText
+            android:id="@+id/st5ans"
+            android:layout_width="@dimen/form_width"
+            android:layout_height="@dimen/input_height"
+            android:textSize="@dimen/statenamesize"
+            android:layout_marginTop="@dimen/maingamespaceing"
+            android:layout_toRightOf="@id/state5"
+            android:autoText="false"
+            android:gravity="center"
+            android:layout_below="@id/st4ans"
+            android:background="@android:color/white"
+            />
+
+
+
+
+
+        />
+
+</RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--animating the waiting bear -->
+        <ImageView
+            android:id="@+id/waitpicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="330dp"
+            />
+
+        <!-- this is for my buttons at the bottom -->
+
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:layout_gravity="bottom"
+    android:padding="20dp"
+    >
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:onClick="press"
+        android:layout_width="wrap_content"
+        android:src="@drawable/backbutton"
+        android:text="Back"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/submitmessage"
+        android:text="sample sample smaple"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+
+        />
+
+    <ImageButton
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/submitbutton"
+        android:text="submit"
+        android:onClick="press"
+
+        android:layout_gravity="right"/>
+</LinearLayout>
+
+    </FrameLayout>
+    </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+

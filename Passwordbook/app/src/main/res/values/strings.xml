@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Passwordbook</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_enter_new">enter_new</string>
+    <string name="title_activity_enter_pass">enter_pass</string>
+    <string name="title_activity_edittable">Edittable</string>
+
+</resources>

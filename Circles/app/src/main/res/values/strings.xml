@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/*
+* Author: Matthew Lao
+* class: 211D
+* Date: 9-31-14
+* Title: HW#5: Circles
+*
+* Description:  This program draws circles onto a canvas in different positions
+* and colors then clears them all.
+* */
+
+-->
+<resources>
+
+    <string name="app_name">Circles</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="buttonmain">Hit me!</string>
+    <string name="clear">Clear</string>
+
+    <color name="black">#ff000000</color>
+    <color name="white">#fffffefd</color>
+
+
+
+</resources>

@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:gravity="right"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".stopwatch">
+
+    <LinearLayout
+        android:id="@+id/times"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/resetbutton"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:text="RESET"
+                android:onClick="press"
+                />
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:text="SAVE"
+                android:onClick="press"
+                />
+
+            </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100dp"
+            android:textColor="@android:color/white"
+            android:text="00:00:00"
+            />
+          <TextView
+              android:id="@+id/milisec"
+              android:layout_width="fill_parent"
+              android:textColor="@android:color/white"
+              android:gravity="right"
+              android:textSize="40dp"
+              android:text="00"
+              android:layout_height="60dp" />
+
+      </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="left"
+            >
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+
+                >
+        <ListView
+            android:id="@+id/timerlastlist"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:textSize="50dp"
+            android:layout_gravity="right"
+            android:textColor="@android:color/white"
+            android:text="00:00:00"
+            />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Last lap"
+
+                    />
+            <TextView
+                android:id="@+id/lastlap"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:textColor="@android:color/white"
+                android:text="00:00:00"
+
+                />
+
+
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:textSize="50dp"
+            android:id="@+id/lap"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:text="LAP"
+            android:onClick="press"
+
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/timerlap"
+            android:textSize="40dp"
+            android:gravity="right"
+            android:textColor="@android:color/white"
+            android:text="00:00:00"
+
+            />
+        <TextView
+            android:id="@+id/milisec2"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:gravity="right"
+            android:textSize="30dp"
+            android:text=" 00"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textSize="50dp"
+            android:id="@+id/cleattable"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:text="CLEAR"
+            android:onClick="press"
+
+
+            />
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+
+        >
+    <ImageButton
+        android:id="@+id/startstopbutton"
+        android:onClick="press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/startb"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
